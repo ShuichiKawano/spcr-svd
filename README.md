@@ -1,2 +1,2 @@
 # spcr-svd
-Sparse principal component regression via singular value decomposition approach. I perform
+Sparse principal component regression via singular value decomposition approach. 
