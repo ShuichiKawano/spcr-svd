@@ -15,7 +15,7 @@ source("R/cv.spcrSVD_linearized.R")
 library(MASS)
 ```
 
-Setteing of simulation.
+Setting of simulation.
 ```
 n <- 50; ErrorVariance <- 1; k <- 1; np <- 2; dummy_np <- 8
 w <- 1e-1; rho1 <- 1; rho2 <- 1; rho3 <- 1; rho_V <- 1; rho_beta <- 1; tol <- 1e-5
@@ -28,16 +28,19 @@ x_ori <- cbind(x_ori, x_dummy)
 y_ori <- nu0[1]*x_ori[ ,1] + nu0[2]*x_ori[ ,2] + rnorm(n, 0, ErrorVariance)
 y <- y_ori - mean(y_ori)
 x <- sweep(x_ori, 2, apply(x_ori,2,mean))
+```
 
-# Perform spcrSVD
+Perform spcrSVD
+```
+# Perform spcrSVD in the file spcrSVD.R
 spcrSVD(x=x, y=y, k=k, w=w, lambda_V=1e-1, lambda_beta=1e-1, rho1=rho1, rho2=rho2, rho3=rho3, tol=tol)
 
-# Perform cv.spcrSVD with five-fold
+# Perform cv.spcrSVD with five-fold in the file cv.spcrSVD.R
 cv.spcrSVD(x=x, y=y, k=k, w=w, fold=5, rho1=rho1, rho2=rho2, rho3=rho3, tol=tol)
 
-# Perform spcrSVD_linearized
+# Perform spcrSVD_linearized in the file spcrSVD_linearized.R
 spcrSVD_linearized(x=x, y=y, k=k, w=w, lambda_V=1e-1, lambda_beta=1e-1, rho_V=rho_V, rho_beta=rho_beta, tol=tol)
 
-# Perform cv.spcrSVD_linearized with five-fold
+# Perform cv.spcrSVD_linearized with five-fold in the file cv.spcrSVD_linearized.R
 cv.spcrSVD_linearized(x=x, y=y, k=k, w=w, fold=5, rho_V=rho_V, rho_beta=rho_beta, tol=tol)
 ```
