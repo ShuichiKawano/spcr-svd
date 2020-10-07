@@ -6,15 +6,17 @@ This is an R source code for performing sparse principal component regression vi
 - **cv.spcrSVD_linearized.R** computes cross-validation of spcrSVD_linearized. 
 
 ## Usage example
+Read source files and a package.
 ```
-# Read source files and a package.
 source("R/spcrSVD.R")
 source("R/cv.spcrSVD.R")
 source("R/spcrSVD_linearized.R")
 source("R/cv.spcrSVD_linearized.R")
 library(MASS)
+```
 
-# Setteing of simulation.
+Setteing of simulation.
+```
 n <- 50; ErrorVariance <- 1; k <- 1; np <- 2; dummy_np <- 8
 w <- 1e-1; rho1 <- 1; rho2 <- 1; rho3 <- 1; rho_V <- 1; rho_beta <- 1; tol <- 1e-5
 Sigma <- diag( rep(1,np) )
