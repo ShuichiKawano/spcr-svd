@@ -5,9 +5,9 @@ This is an R source code for performing sparse principal component regression vi
 - **spcrSVD_linearized.R** provides spcrSVD via a linearized ADMM algorithm. 
 - **cv.spcrSVD_linearized.R** computes cross-validation of spcrSVD_linearized. 
 ## Usage example
-'''
+```
 source("R/spcrSVD.R")
 source("R/cv.spcrSVD.R")
 source("R/spcrSVD_linearized.R")
 source("R/cv.spcrSVD_linearized.R")
-'''
+```
