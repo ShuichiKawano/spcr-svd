@@ -1,4 +1,6 @@
-# Sparse principal component regression via singular value decomposition approach. 
+# Sparse principal component regression via singular value decomposition approach (spcrSVD)
+Author: Shuichi Kawano
+
 This is an R source code for performing sparse principal component regression via singular value decomposition approach (spcrSVD). The directory *R* consists of four files as follows. 
 - **spcrSVD.R** provides spcrSVD via an ADMM algorithm. 
 - **cv.spcrSVD.R** computes cross-validation of spcrSVD. 
